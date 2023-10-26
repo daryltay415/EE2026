@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Sep 24 12:22:17 2023
+| Host         : DarylLaptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file lab3_assignment_main_control_sets_placed.rpt
+| Design       : lab3_assignment_main
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            2 |
+|    16+ |           13 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              66 |           15 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             514 |           69 |
+| Yes          | No                    | No                     |              36 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              72 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+--------------------------+---------------------------+------------------+----------------+
+|      Clock Signal      |       Enable Signal      |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++------------------------+--------------------------+---------------------------+------------------+----------------+
+|  fa6/ma0/clk           |                          |                           |                1 |              4 |
+|  ma0/Clk5Hz            |                          |                           |                1 |              6 |
+|  Basys_clock_IBUF_BUFG | fa6/ma0/ca0/E[0]         |                           |                2 |              8 |
+|  Basys_clock_IBUF_BUFG | fa6/an[3]_i_1_n_0        | fa4/an_reg[0][0]          |                2 |              8 |
+|  Basys_clock_IBUF_BUFG |                          | fa4/led_reg[7]_1[0]       |                2 |             16 |
+|  fa0/Clk1Hz            |                          |                           |                2 |             22 |
+|  Basys_clock_IBUF_BUFG | fa6/seg[6]_i_1_n_0       |                           |                4 |             28 |
+|  Basys_clock_IBUF_BUFG |                          |                           |               11 |             34 |
+|  Basys_clock_IBUF_BUFG |                          | ma0/Count[31]_i_1__3_n_0  |                8 |             62 |
+|  Basys_clock_IBUF_BUFG |                          | fa2/Count[31]_i_1__1_n_0  |                8 |             62 |
+|  Basys_clock_IBUF_BUFG |                          | fa1/Count2[31]_i_1__0_n_0 |                8 |             62 |
+|  Basys_clock_IBUF_BUFG |                          | fa1/Count[31]_i_1__0_n_0  |                8 |             62 |
+|  Basys_clock_IBUF_BUFG |                          | fa0/Count2[31]_i_1_n_0    |                8 |             62 |
+|  Basys_clock_IBUF_BUFG |                          | fa0/Count[31]_i_1_n_0     |                8 |             62 |
+|  Basys_clock_IBUF_BUFG |                          | fa3/Count[31]_i_1__2_n_0  |                8 |             62 |
+|  Basys_clock_IBUF_BUFG |                          | fa4/SR[0]                 |               11 |             64 |
+|  Clk1kHz_BUFG          | fa7/sw15Count[0]_i_2_n_0 | fa7/clear                 |                8 |             64 |
++------------------------+--------------------------+---------------------------+------------------+----------------+
+
+
